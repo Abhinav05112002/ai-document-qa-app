@@ -1,5 +1,0 @@
-package com.aiapp.backend.controller;
-
-public class HealthController {
-
-}
