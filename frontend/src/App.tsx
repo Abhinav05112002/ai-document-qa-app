@@ -1,14 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// @ts-ignore: no declaration file for .jsx module
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
+
+    return <Dashboard />;
 }
 
 export default App;
