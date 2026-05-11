@@ -2,7 +2,9 @@
 
 An AI-powered multimedia assistant that allows users to upload PDFs, audio, and video files, perform semantic search, ask contextual questions using Retrieval-Augmented Generation (RAG), and navigate multimedia content using AI-generated timestamps.
 
-## Features
+---
+
+# Features
 
 - Upload PDF, audio, and video files
 - AI-powered document question answering
@@ -17,9 +19,11 @@ An AI-powered multimedia assistant that allows users to upload PDFs, audio, and 
 - MySQL database integration
 - Groq LLM integration
 
-## Architecture
+---
 
-````text
+# Architecture
+
+```text
 Frontend (React + TypeScript)
         ↓
 Spring Boot Backend APIs
@@ -31,43 +35,48 @@ RAG Retrieval Engine
 Groq LLM / Whisper APIs
         ↓
 MySQL Database
-
-
+```
 
 ---
 
-```markdown id="r2q7xn"
-## Tech Stack
+# Tech Stack
 
-### Frontend
+## Frontend
+
 - React
 - TypeScript
 - Tailwind CSS
 - Axios
 - Vite
 
-### Backend
+## Backend
+
 - Java 21
 - Spring Boot
 - Spring Security
 - JPA / Hibernate
 - Maven
 
-### AI / ML
+## AI / ML
+
 - Groq LLM API
 - Llama 3
 - Whisper Transcription
 - Sentence Embeddings
 - RAG Pipeline
 
-### Database
+## Database
+
 - MySQL
 
-### Deployment
+## Deployment
+
 - Docker
 - Render
 
-## Project Structure
+---
+
+# Project Structure
 
 ```text
 ai-document-qa-app/
@@ -84,13 +93,17 @@ ai-document-qa-app/
 │   ├── components/
 │   ├── pages/
 │   └── api/
+│
+├── screenshots/
+│
+└── README.md
+```
 
-## Setup Instructions
+---
 
-```markdown id="x9q4vn"
-## Local Setup
+# Local Setup
 
-### Backend Setup
+## Backend Setup
 
 ```bash
 cd backend
@@ -98,53 +111,93 @@ cd backend
 ./mvnw clean install
 
 ./mvnw spring-boot:run
+```
 
-Backend runs on: http://localhost:8080
+Backend runs on:
 
-### Frontend Setup
+```text
+http://localhost:8080
+```
 
+---
+
+## Frontend Setup
+
+```bash
 cd frontend
 
 npm install
 
 npm run dev
+```
 
-Frontend runs on: http://localhost:5173
+Frontend runs on:
 
-```markdown id="p7q1xn"
-## API Endpoints
+```text
+http://localhost:5173
+```
 
-### Upload File
+---
+
+# Environment Variables
+
+Create a `.env` file inside the backend directory:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+
+DB_USERNAME=root
+
+DB_PASSWORD=root
+```
+
+---
+
+# API Endpoints
+
+## Upload File
+
 ```http
 POST /api/files/upload
+```
 
-### Ask AI Question
+## Ask AI Question
+
 ```http
 POST /api/chat
+```
 
-### Generate Summary
+## Generate Summary
+
 ```http
 POST /api/summary/{fileId}
+```
 
-### Timestamp Search
+## Timestamp Search
+
 ```http
 GET /api/timestamps/{fileId}?query=AWS
+```
 
-## Screenshots
+---
 
-### Dashboard
+# Screenshots
+
+## Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
-### AI Chat
+## AI Chat
 
 ![Chat](screenshots/chat.png)
 
-### Video Timestamp Navigation
+## Video Timestamp Navigation
 
 ![Video](screenshots/video-player.png)
 
-## Future Improvements
+---
+
+# Future Improvements
 
 - Multi-document RAG retrieval
 - Vector database integration
@@ -155,13 +208,16 @@ GET /api/timestamps/{fileId}?query=AWS
 - Advanced timestamp alignment
 - Open-source embedding models
 
-## Author
+---
 
-Abhinav
+# Author
+
+**Abhinav**
 
 AI Multimedia Assistant Project
 
-## License
+---
+
+# License
 
 This project is developed for educational and assignment purposes.
-````
