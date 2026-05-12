@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-document-backend
+    runtime: docker
+    rootDir: backend
+
+  - type: web
+    name: ai-document-frontend
+    runtime: static
+    rootDir: frontend
