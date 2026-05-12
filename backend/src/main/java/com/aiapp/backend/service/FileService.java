@@ -27,6 +27,9 @@ public class FileService {
     
     private final RagService ragService;
 
+    @Value("${app.base-url}")
+    private String baseUrl;
+
     @Value("${file.upload-dir}")
     private String uploadDir;
 
@@ -74,9 +77,9 @@ public class FileService {
                 uploadedFileRepository.save(uploadedFile);
         
         savedFile.setFileUrl(
-        	    "http://localhost:8080/uploads/"
-        	    + savedFile.getStoredFileName()
-        	);
+                baseUrl + "/uploads/"
+                + savedFile.getStoredFileName()
+        );
         
         uploadedFileRepository.save(savedFile);
 
