@@ -19,6 +19,10 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21
 
+# Install ffmpeg
+RUN apt-get update && \
+    apt-get install -y ffmpeg
+
 WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
