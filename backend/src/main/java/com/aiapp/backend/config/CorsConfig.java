@@ -19,7 +19,7 @@ public class CorsConfig {
                  registry.addMapping("/**")
                         .allowedOrigins(
                             "http://localhost:5173",
-                            "https://your-frontend-name.onrender.com"
+                            "https://ai-document-frontend-57uo.onrender.com"
                         )
                         .allowedMethods(
                             "GET",
